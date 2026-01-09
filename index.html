@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasbih Digital | Project Mahasiswa</title>
+
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS (bagian style) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <h1>Tasbih Digital</h1>
+    <p>Dzikir Harian & Jadwal Sholat</p>
+
+    <!-- Jam realtime -->
+    <div class="clock">
+      <span id="current-time">00:00:00</span>
+      <span id="current-date">-- --- ----</span>
+    </div>
+  </header>
+
+  <!-- ===== JADWAL SHOLAT ===== -->
+  <section class="prayer-section">
+    <h2>Jadwal Sholat - Pasuruan</h2>
+
+    <div class="prayer-times">
+      <div class="prayer">
+        <span>Subuh</span>
+        <strong id="subuh">--:--</strong>
+      </div>
+      <div class="prayer">
+        <span>Dzuhur</span>
+        <strong id="dzuhur">--:--</strong>
+      </div>
+      <div class="prayer">
+        <span>Ashar</span>
+        <strong id="ashar">--:--</strong>
+      </div>
+      <div class="prayer">
+        <span>Maghrib</span>
+        <strong id="maghrib">--:--</strong>
+      </div>
+      <div class="prayer">
+        <span>Isya</span>
+        <strong id="isya">--:--</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TASBIH DIGITAL ===== -->
+  <main class="tasbih-container">
+
+    <!-- Pilihan Dzikir -->
+    <section class="dzikir-section">
+      <h2>Pilih Dzikir</h2>
+      <select id="dzikir-select">
+        <option value="subhanallah">Subhanallah</option>
+        <option value="alhamdulillah">Alhamdulillah</option>
+        <option value="allahuakbar">Allahu Akbar</option>
+        <option value="custom">Dzikir Bebas</option>
+      </select>
+
+      <input 
+        type="text" 
+        id="custom-dzikir" 
+        placeholder="Masukkan dzikir sendiri"
+        disabled
+      >
+    </section>
+
+    <!-- Counter -->
+    <section class="counter-section">
+      <div class="counter-display">
+        <span id="counter">0</span>
+      </div>
+
+      <div class="target">
+        <label>Target:</label>
+        <select id="target">
+          <option value="33">33</option>
+          <option value="99">99</option>
+          <option value="100">100</option>
+          <option value="1000">1000</option>
+        </select>
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+
+      <div class="buttons">
+        <button id="btn-add">+ Dzikir</button>
+        <button id="btn-reset">Reset</button>
+      </div>
+    </section>
+
+    <!-- Statistik -->
+    <section class="stats-section">
+      <h2>Statistik Hari Ini</h2>
+      <div class="stats">
+        <div class="stat">
+          <span>Total Dzikir</span>
+          <strong id="total-dzikir">0</strong>
+        </div>
+        <div class="stat">
+          <span>Dzikir Aktif</span>
+          <strong id="active-dzikir">-</strong>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2026 Tasbih Digital | Project Mahasiswa</p>
+    <button id="toggle-theme">Dark / Light</button>
+  </footer>
+
+  <!-- JavaScript (nanti kita isi) -->
+  <script src="script.js"></script>
+</body>
+</html>
